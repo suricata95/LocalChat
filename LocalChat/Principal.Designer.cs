@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gbServidor = new System.Windows.Forms.GroupBox();
             this.txtSIP = new System.Windows.Forms.TextBox();
             this.btnIniciar = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             this.txtMensaje = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.gbServidor.SuspendLayout();
             this.gbCliente.SuspendLayout();
             this.SuspendLayout();
@@ -194,6 +196,12 @@
             // 
             this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -236,6 +244,7 @@
         private System.Windows.Forms.TextBox txtMensaje;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
